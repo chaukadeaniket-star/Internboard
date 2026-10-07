@@ -1,76 +1,36 @@
-name: Deploy ITZFIZZ to GitHub Pages
+name: Deploy InternBoard to GitHub Pages
 
 on:
   push:
     branches:
       - main
-
   workflow_dispatch:
 
-# Permissions required for GitHub Pages deployment
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Prevent multiple deployments from running at the same time
-concurrency:
-  group: pages
-  cancel-in-progress: true
-
 jobs:
-
-  # ----------------------------------------
-  # BUILD JOB
-  # ----------------------------------------
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
-    steps:
-
-      # Download repository code
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      # Install Node.js
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: npm
-          cache-dependency-path: frontend/package-lock.json
-
-      # Install project dependencies
-      - name: Install dependencies
-        working-directory: frontend
-        run: npm ci
-
-      # Build Vite project
-      - name: Build project
-        working-directory: frontend
-        run: npm run build
-
-      # Upload the Vite dist folder
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: frontend/dist
-
-  # ----------------------------------------
-  # DEPLOY JOB
-  # ----------------------------------------
-  deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
 
-    runs-on: ubuntu-latest
-
-    needs: build
-
     steps:
+      - name: Checkout
+        uses: actions/checkout@v6
 
-      # Deploy the uploaded artifact
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload website
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: '.'
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
