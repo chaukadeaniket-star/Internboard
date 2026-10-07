@@ -1,0 +1,147 @@
+/*{PAGE OVERVIEW}*/
+HOW IT WORKS PAGE
+
+page title : How It Works | InternBoard;
+page stylesheet : ../styles/How_It_Works.css;
+page font family : Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif;
+page text color : #111827;
+page background : #ffffff;
+page horizontal overflow : hidden;
+page scroll behavior : smooth;
+
+/*{NAVBAR AND BRANDING}*/
+navbar height : 66px;
+navbar width : 100%;
+navbar background : rgba(255, 255, 255, 0.98);
+navbar bottom border : 1px solid #edf0f6;
+navbar position : relative;
+navbar z-index : 100;
+navbar content width : min(1230px, 92%);
+navbar content alignment : space-between;
+
+logo icon : 🎓;
+logo text : InternBoard;
+logo font size : 25px;
+logo font weight : 800;
+logo letter spacing : -1px;
+logo accent color : #5944ef;
+
+navigation links : Home, Browse, About, How It Works, Contact;
+navigation active page : How It Works;
+navigation link padding : 10px 15px;
+navigation link border radius : 12px;
+navigation link font size : 14px;
+navigation link font weight : 600;
+navigation link text color : #202638;
+navigation link hover color : #5944ef;
+navigation link hover background : #f1efff;
+navigation active color : #5944ef;
+navigation active background : #eeebff;
+navigation link text decoration : none;
+
+search button size : 40px;
+search button background : transparent;
+search button color : #111827;
+search button border radius : 50%;
+search button hover background : #f1efff;
+search button hover color : #5944ef;
+login button background : #ffffff;
+login button border : 1px solid #e5e8f0;
+login button border radius : 13px;
+login button text color : #151a2c;
+login button hover color : #5944ef;
+get started button background : linear-gradient(135deg, #6845ff, #5039e9);
+get started button text color : #ffffff;
+get started button border radius : 13px;
+get started button hover transform : translateY(-2px);
+
+/*{HERO}*/
+hero min-height : 384px;
+hero background : radial gradient at 75% with #d3d4ff glow, over linear gradient #ffffff to #f7f9ff to #eef2ff;
+hero overflow : hidden;
+hero position : relative;
+hero content width : min(1230px, 92%);
+hero layout : 53% text column, 47% image column;
+hero heading : Your Internship Journey Made Simple;
+hero heading accent color : #5944ef;
+hero heading font size : clamp(43px, 4.2vw, 58px);
+hero description : InternBoard makes searching opportunities and building a career easy, transparent, and student-friendly;
+hero illustration : ../assets/how it works .hero.png;
+hero illustration alt text : Student exploring internship opportunities;
+hero badge text : How It Works;
+hero badge background : #eeebff;
+hero badge text color : #5944ef;
+
+/*{FOUR JOURNEY STEPS}*/
+steps section content width : min(1230px, 92%);
+steps section heading : How InternBoard Works?;
+steps section description : Follow simple steps to find, apply, and grow your career with real opportunities;
+steps layout : four step cards in a horizontal grid with animated arrows between them;
+step card minimum height : 342px;
+step card border radius : 17px;
+step card border : 1px solid rgba(224, 228, 238, 0.75);
+step card hover transform : translateY(-4px);
+step card hover shadow : 0 14px 35px rgba(72, 82, 135, 0.1);
+step card image height : 208px;
+step card image fit : cover;
+step card image position : center;
+step arrow color : #6246f2;
+step arrow animation : move horizontally 4px every 2 seconds;
+
+step 1 title : Create Your Profile;
+step 1 description : Sign up and build a profile with your skills, interests, and career goals;
+step 1 image : ../assets/howit works1.png;
+step 1 background : linear-gradient(145deg, #f5f2ff, #fbfaff);
+step 1 number background : linear-gradient(135deg, #7045ff, #5637ee);
+
+step 2 title : Explore Opportunities;
+step 2 description : Search and browse verified internships from top companies across various domains;
+step 2 image : ../assets/how it works 2.png;
+step 2 background : linear-gradient(145deg, #f1f8ff, #fbfdff);
+step 2 number background : linear-gradient(135deg, #3e8cff, #2873ee);
+
+step 3 title : Apply with Ease;
+step 3 description : Apply to internships with a single click and track your application status;
+step 3 image : ../assets/how it works 3.png;
+step 3 background : linear-gradient(145deg, #eefbf7, #fbfffd);
+step 3 number background : linear-gradient(135deg, #18c99a, #09aa7d);
+
+step 4 title : Build Your Career;
+step 4 description : Gain real-world experience, develop skills, and take the next step toward your future;
+step 4 image : ../assets/how it works4.png;
+step 4 background : linear-gradient(145deg, #fff9eb, #fffdf7);
+step 4 number background : linear-gradient(135deg, #ffbd25, #f5a600);
+
+/*{CALL TO ACTION}*/
+call to action heading : Start Your Internship Journey Today;
+call to action description : Join students who are building their careers with InternBoard;
+call to action background : linear gradient from #5335ef to #6948ff with a purple radial glow;
+call to action text color : #ffffff;
+call to action button : Explore Internships;
+call to action button background : #ffffff;
+call to action button text color : #5944ef;
+call to action button hover transform : translateY(-2px);
+
+/*{SEARCH OVERLAY AND INTERACTIONS}*/
+search overlay default display : none;
+search overlay open display : flex;
+search overlay position : fixed;
+search overlay inset : 0;
+search overlay z-index : 1000;
+search overlay background : rgba(12, 17, 35, 0.55);
+search overlay backdrop filter : blur(7px);
+search panel width : min(620px, 92%);
+search panel background : #ffffff;
+search panel border radius : 22px;
+search panel heading : Find Your Next Opportunity;
+search input placeholder : Search internships, companies, skills...;
+popular search buttons : React, Python, UI/UX, Java, Internships;
+
+search button action : Open the search overlay and focus the search input;
+close search action : Close the overlay and restore page scrolling;
+overlay background click : Close the overlay;
+Escape key action : Close the overlay;
+popular search action : Copy the selected term into the search input and focus it;
+explore internships button action : Navigate to Browse.html;
+get started button action : Navigate to register.html;
+login button action : Navigate to login.html;

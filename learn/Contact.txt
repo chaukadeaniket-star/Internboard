@@ -1,0 +1,29 @@
+/*{PAGE OVERVIEW}*/
+Page: Contact
+HTML: pages/Contact.html
+Stylesheet: styles/Contact.css
+Purpose: Show InternBoard contact information, collect a visitor message, and provide quick-help links.
+
+/*{CONTACT INFORMATION}*/
+Email: support@internboard.com
+Phone: +91 98765 43210
+Office: Maharashtra, India
+Social links: LinkedIn, Instagram, Twitter, and GitHub
+
+/*{CONTACT FORM}*/
+Fields: Full name, email address, subject, and message.
+The form validates required fields in the browser and displays a status message.
+No message is sent to a server in this frontend demo.
+
+/*{QUICK HELP AND CALL TO ACTION}*/
+Quick-help links lead to Browse Internships, How It Works, and partner information.
+Explore Internships opens pages/Browse.html.
+Get Started opens pages/register.html.
+
+/*{SEARCH OVERLAY}*/
+Search modal includes popular suggestions for React, Python, UI/UX, Java, and Internships.
+The overlay closes from its close control, backdrop, or Escape key.
+
+/*{DEMO LIMITATIONS}*/
+Contact details and social links are sample frontend content.
+No contact, email, or social-service backend is connected.

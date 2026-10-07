@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--{DOCUMENT METADATA}-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101326">
+    <title>Login | InternBoard</title>
+    <link rel="stylesheet" href="../styles/login.css">
+    <link rel="shortcut icon" href="../assets/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <div class="light-wash" aria-hidden="true"></div>
+
+    <!--{LOGIN PAGE}-->
+    <main class="login-page">
+        <a class="home-link" href="home.html" aria-label="InternBoard home">
+            <span aria-hidden="true">🎓</span>
+            Intern<span>Board</span>
+        </a>
+
+        <!--{LAMP INTRO}-->
+        <section class="lamp-intro" aria-labelledby="lamp-heading">
+            <div class="lamp-halo" aria-hidden="true"></div>
+            <span class="lamp-cord" aria-hidden="true"></span>
+            <button class="lamp-button" id="lampButton" type="button"
+                aria-label="Turn on the lamp to reveal the login form" aria-pressed="false">
+                <span class="lamp-bulb" aria-hidden="true">💡</span>
+                <span class="lamp-pull" aria-hidden="true"></span>
+            </button>
+            <h1 id="lamp-heading">A brighter way to get started</h1>
+            <p class="lamp-hint" id="lampHint">Click the lamp to turn on the light</p>
+        </section>
+
+        <!--{LOGIN CARD}-->
+        <section class="login-card" id="loginCard" aria-labelledby="login-heading" aria-hidden="true">
+            <div class="card-icon" aria-hidden="true">✨</div>
+            <p class="eyebrow">WELCOME BACK</p>
+            <h2 id="login-heading">Login to InternBoard</h2>
+            <p class="card-description">Pick up where your career journey left off.</p>
+
+            <!--{LOGIN FORM}-->
+            <form id="loginForm">
+                <label for="email">Email address</label>
+                <input id="email" name="email" type="email" autocomplete="email"
+                    placeholder="you@example.com" required>
+
+                <label for="password">Password</label>
+                <div class="password-field">
+                    <input id="password" name="password" type="password" autocomplete="current-password"
+                        placeholder="Enter your password" required>
+                    <button class="password-toggle" id="passwordToggle" type="button"
+                        aria-label="Show password" aria-pressed="false">Show</button>
+                </div>
+
+                <button class="submit-button" type="submit">Login <span aria-hidden="true">→</span></button>
+                <p class="form-message" id="formMessage" role="status" aria-live="polite"></p>
+            </form>
+
+            <p class="signup-prompt">New to InternBoard? <a href="register.html">Create an account</a></p>
+            <p class="signup-prompt">Looking for your next opportunity? <a href="Browse.html">Browse internships</a></p>
+        </section>
+    </main>
+
+    <!--{PAGE SCRIPT}-->
+    <script>
+        const lampButton = document.getElementById("lampButton");
+        const loginCard = document.getElementById("loginCard");
+        const emailInput = document.getElementById("email");
+        const lampHint = document.getElementById("lampHint");
+        const passwordInput = document.getElementById("password");
+        const passwordToggle = document.getElementById("passwordToggle");
+        const loginForm = document.getElementById("loginForm");
+        const formMessage = document.getElementById("formMessage");
+
+        lampButton.addEventListener("click", () => {
+            document.body.classList.add("lamp-on");
+            lampButton.setAttribute("aria-pressed", "true");
+            lampButton.setAttribute("aria-label", "Lamp is on");
+            lampHint.textContent = "The light is on. Welcome to InternBoard.";
+            loginCard.setAttribute("aria-hidden", "false");
+            window.setTimeout(() => emailInput.focus({ preventScroll: true }), 450);
+        });
+
+        passwordToggle.addEventListener("click", () => {
+            const showingPassword = passwordInput.type === "password";
+            passwordInput.type = showingPassword ? "text" : "password";
+            passwordToggle.textContent = showingPassword ? "Hide" : "Show";
+            passwordToggle.setAttribute("aria-label", showingPassword ? "Hide password" : "Show password");
+            passwordToggle.setAttribute("aria-pressed", String(showingPassword));
+        });
+
+        loginForm.addEventListener("submit", (event) => {
+            event.preventDefault();
+            formMessage.textContent = "Login is not connected yet. Please check back soon.";
+        });
+    </script>
+</body>
+</html>

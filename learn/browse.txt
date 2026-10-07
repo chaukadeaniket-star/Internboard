@@ -1,0 +1,32 @@
+/*{PAGE OVERVIEW}*/
+Page: Browse Internships
+HTML: pages/Browse.html
+Stylesheet: styles/Browse.css
+Purpose: Search, filter, compare, and apply to the available internship cards.
+
+/*{SEARCH AND FILTERS}*/
+Search matches internship roles, companies, skills, and related terms.
+Popular search terms: React, Python, UI/UX, Java, and Internships.
+Filters: Domain, location, duration, and work type.
+Clear Filters resets the search and all selected filters.
+The result count updates as internships are filtered.
+No-results feedback is shown when no cards match.
+
+/*{INTERNSHIP CARDS}*/
+Cards display the internship title, company, location, duration, stipend, skills, and work mode.
+Apply Now opens pages/apply.html with the selected opportunity details in the URL.
+The current opportunity list is static demonstration data.
+
+/*{SEARCH OVERLAY}*/
+The navbar search opens a modal search form.
+Search can be submitted with the Search button or Enter.
+The overlay closes with its close control, backdrop, or Escape key.
+Selecting a popular term copies it into the search input.
+
+/*{NAVIGATION}*/
+Get Started opens pages/register.html.
+The Browse page remains available through the main navigation and internship links.
+
+/*{DEMO LIMITATIONS}*/
+The listed roles are sample opportunities; no live job service is connected.
+Application submission is a browser-only demo and does not contact employers.

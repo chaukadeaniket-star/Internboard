@@ -1,0 +1,396 @@
+/*{RESET AND GLOBAL STYLES}*/
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+    background:
+        radial-gradient(circle at 50% 12%, rgba(69, 73, 118, 0.35), transparent 32%),
+        #101326;
+    color: #f8f9ff;
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    transition: background 0.8s ease, color 0.8s ease;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+a {
+    color: inherit;
+}
+
+/*{LAMP PAGE BACKGROUND}*/
+.light-wash {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background: radial-gradient(ellipse at 50% 4%, rgba(255, 224, 151, 0.9), rgba(255, 224, 151, 0.18) 34%, transparent 68%);
+    opacity: 0;
+    transition: opacity 0.9s ease;
+}
+
+.login-page {
+    position: relative;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    padding: 28px 20px 52px;
+}
+
+.home-link {
+    position: absolute;
+    top: 26px;
+    left: max(28px, calc((100vw - 1180px) / 2));
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #f8f9ff;
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+    text-decoration: none;
+}
+
+.home-link > span:last-child {
+    color: #a99aff;
+}
+
+/*{LAMP INTRODUCTION}*/
+.lamp-intro {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px;
+    text-align: center;
+}
+
+.lamp-halo {
+    position: absolute;
+    top: -105px;
+    width: 340px;
+    height: 330px;
+    border-radius: 50%;
+    background: radial-gradient(ellipse, rgba(255, 226, 163, 0.23), transparent 68%);
+    opacity: 0;
+    transform: scale(0.7);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    pointer-events: none;
+}
+
+.lamp-cord {
+    width: 2px;
+    height: 55px;
+    background: #777b91;
+    transform-origin: top;
+    transition: background 0.5s ease;
+}
+
+.lamp-button {
+    position: relative;
+    display: grid;
+    width: 74px;
+    height: 78px;
+    place-items: center;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+    transition: transform 0.25s ease, filter 0.5s ease;
+}
+
+.lamp-button:hover {
+    transform: scale(1.08);
+}
+
+.lamp-button:focus-visible {
+    outline: 3px solid #c6bbff;
+    outline-offset: 7px;
+}
+
+.lamp-bulb {
+    font-size: 55px;
+    filter: grayscale(0.85) brightness(0.7);
+    transition: filter 0.7s ease, transform 0.7s ease;
+}
+
+.lamp-pull {
+    position: absolute;
+    right: 1px;
+    bottom: -10px;
+    width: 2px;
+    height: 28px;
+    background: #777b91;
+    transform: rotate(-12deg);
+    transform-origin: top;
+    transition: background 0.5s ease;
+}
+
+.lamp-intro h1 {
+    margin: 20px 0 7px;
+    color: #f8f9ff;
+    font-size: clamp(24px, 4vw, 34px);
+    letter-spacing: -1.1px;
+}
+
+.lamp-hint {
+    margin: 0;
+    color: #aab0c6;
+    font-size: 14px;
+}
+
+/*{LOGIN AND REGISTRATION CARD}*/
+.login-card {
+    display: none;
+    width: min(440px, 100%);
+    margin-top: 34px;
+    padding: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.68);
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 28px 80px rgba(26, 22, 56, 0.2);
+    color: #151a2e;
+}
+
+@keyframes revealCard {
+    from {
+        opacity: 0;
+        transform: translateY(24px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/*{FORM FIELDS AND ACTIONS}*/
+.card-icon {
+    display: grid;
+    width: 44px;
+    height: 44px;
+    place-items: center;
+    margin-bottom: 17px;
+    border-radius: 14px;
+    background: #eeebff;
+    font-size: 22px;
+}
+
+.eyebrow {
+    margin: 0 0 6px;
+    color: #6046ef;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.login-card h2 {
+    margin: 0;
+    color: #101828;
+    font-size: 27px;
+    letter-spacing: -0.8px;
+}
+
+.card-description {
+    margin: 8px 0 23px;
+    color: #717b91;
+    font-size: 14px;
+}
+
+.login-card form > label {
+    display: block;
+    margin: 15px 0 7px;
+    color: #293146;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.login-card input {
+    width: 100%;
+    height: 48px;
+    padding: 0 14px;
+    border: 1px solid #e2e6ef;
+    border-radius: 12px;
+    outline: none;
+    background: #fbfcff;
+    color: #151a2e;
+    font-size: 14px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.login-card input:focus {
+    border-color: #6046ef;
+    box-shadow: 0 0 0 4px rgba(96, 70, 239, 0.1);
+}
+
+.login-card input::placeholder {
+    color: #9aa2b3;
+}
+
+.password-field {
+    position: relative;
+}
+
+.password-field input {
+    padding-right: 68px;
+}
+
+.password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    padding: 5px;
+    border: 0;
+    background: transparent;
+    color: #6046ef;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+.submit-button {
+    display: flex;
+    width: 100%;
+    height: 49px;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    margin-top: 23px;
+    border: 0;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #6845ff, #5141ed);
+    box-shadow: 0 9px 20px rgba(91, 70, 246, 0.2);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 750;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.submit-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(91, 70, 246, 0.28);
+}
+
+.form-message {
+    min-height: 18px;
+    margin: 12px 0 0;
+    color: #6e5b9c;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.signup-prompt {
+    margin: 12px 0 0;
+    color: #737d91;
+    font-size: 12px;
+    text-align: center;
+}
+
+.signup-prompt a {
+    color: #6046ef;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.signup-prompt a:hover {
+    text-decoration: underline;
+}
+
+/*{LAMP ON STATE}*/
+.lamp-on {
+    background:
+        radial-gradient(ellipse at 50% 8%, #fff0c8 0, #f6f2ff 37%, #e9edff 100%);
+    color: #151a2e;
+}
+
+.lamp-on .light-wash,
+.lamp-on .lamp-halo {
+    opacity: 1;
+}
+
+.lamp-on .lamp-halo {
+    transform: scale(1);
+}
+
+.lamp-on .lamp-cord,
+.lamp-on .lamp-pull {
+    background: #a28c5c;
+}
+
+.lamp-on .lamp-bulb {
+    filter: grayscale(0) brightness(1.1) drop-shadow(0 0 25px rgba(255, 198, 80, 0.8));
+    transform: rotate(8deg);
+}
+
+.lamp-on .lamp-intro h1 {
+    color: #171b31;
+}
+
+.lamp-on .lamp-hint {
+    color: #606b84;
+}
+
+.lamp-on .home-link {
+    color: #101828;
+}
+
+.lamp-on .home-link > span:last-child {
+    color: #5546f7;
+}
+
+.lamp-on .login-card {
+    display: block;
+    animation: revealCard 0.55s ease both;
+}
+
+/*{RESPONSIVE AND REDUCED MOTION}*/
+@media (max-width: 520px) {
+    .login-page {
+        padding: 22px 16px 36px;
+    }
+
+    .home-link {
+        position: static;
+        align-self: flex-start;
+        font-size: 19px;
+    }
+
+    .lamp-intro {
+        margin-top: 48px;
+    }
+
+    .login-card {
+        margin-top: 26px;
+        padding: 25px 21px;
+        border-radius: 20px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}

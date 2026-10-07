@@ -1,0 +1,49 @@
+/*{PAGE OVERVIEW}*/
+Page: InternBoard home
+HTML: pages/home.html
+Stylesheet: styles/home.css
+JavaScript: functionality/Home.js
+Purpose: Introduce InternBoard and let students search and browse internship opportunities.
+
+/*{GLOBAL STYLE}*/
+Body background: #f8faff
+Body text: #111827
+Font family: Inter, Segoe UI, sans-serif
+Horizontal overflow: hidden
+Scroll behavior: smooth
+
+/*{NAVBAR}*/
+Height: 76px
+Background: rgba(255, 255, 255, 0.95)
+Bottom border: 1px solid #edf0f7
+Logo: 🎓 InternBoard
+Navigation links: Home, Browse, About, How It Works, Contact
+Search and Login buttons: Open their site actions
+Get Started action: Opens pages/register.html
+
+/*{HERO}*/
+Heading: Your Gateway to Amazing Internships
+Description: Discover verified internships, build real skills, and kickstart your career.
+Primary action: Explore Internships opens pages/Browse.html
+Secondary action: Watch Video opens the video modal
+Quick statistics: Internships, partner companies, and students placed
+Hero visual: Opportunity search panel with sample internship cards
+
+/*{SEARCH AND FILTERS}*/
+Search panel: Search internships, companies, and skills
+Category filters: Filter the displayed internship cards
+Popular search terms: React, Python, UI/UX, Java, and Internships
+View All Internships action: Opens pages/Browse.html
+
+/*{FEATURES AND MODALS}*/
+Feature cards: Curated Opportunities, Build Real Skills, Track Your Progress, Career Growth
+Search overlay: Opens from the navbar search control and can be closed with its close control, backdrop, or Escape
+Video modal: Opens from Watch Video and closes from its close control or backdrop
+Keyboard behavior: Search and modal controls support keyboard interaction
+
+/*{RESPONSIVE LAYOUT}*/
+Stylesheet breakpoints adjust navigation, hero content, cards, and modal layout for smaller screens.
+
+/*{DEMO LIMITATIONS}*/
+Internship counts and preview cards are static demonstration content.
+This frontend does not connect to a live jobs or account service.

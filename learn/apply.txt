@@ -1,0 +1,29 @@
+/*{PAGE OVERVIEW}*/
+Page: Apply for Internship
+HTML: pages/apply.html
+Stylesheet: styles/apply.css
+Purpose: Collect student details for an internship application and display the selected opportunity.
+
+/*{OPPORTUNITY SUMMARY}*/
+The opportunity is read from the URL query string.
+Displayed information: Role, company, location, duration, stipend, and skills.
+When a field is not provided, the page hides that optional detail.
+
+/*{APPLICATION FORM}*/
+Required fields: Full name, email address, resume file, and cover letter.
+Optional field: Phone number.
+Cover letter minimum length: 20 characters.
+Resume formats: PDF and Word (.doc, .docx).
+Maximum resume size: 10 MB.
+Registration profile name and email are prefilled when available in this browser session.
+
+/*{SUBMIT ACTION}*/
+Browser form validation runs before the application is saved.
+Application details are saved in localStorage under internboard.applications.
+After saving, the page opens pages/student-dashboard.html?application=submitted.
+The stored record includes applicant contact details, role details, submission status, date, and resume filename.
+
+/*{DEMO LIMITATIONS}*/
+No application is sent to a company or remote server.
+The resume file itself is not saved; only its filename is retained in the application record.
+Applications persist in this browser's local storage and are not shared between browsers or devices.

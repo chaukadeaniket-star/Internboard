@@ -1,0 +1,176 @@
+/*{PAGE OVERVIEW}*/
+ABOUT PAGE
+
+page title : About | InternBoard;
+page stylesheet : ../styles/About.css;
+page favicon : ../assets/favicon.png;
+page font family : Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif;
+page background : #f8faff;
+page text color : #111827;
+page horizontal overflow : hidden;
+page scroll behavior : smooth;
+
+/*{NAVBAR AND BRANDING}*/
+navbar height : 76px;
+navbar width : 100%;
+navbar background : rgba(255, 255, 255, 0.95);
+navbar bottom border : 1px solid #edf0f7;
+navbar position : relative;
+navbar z-index : 100;
+navbar content width : min(100%, 92%);
+navbar content alignment : space-between;
+
+logo icon : 🎓;
+logo text : InternBoard;
+logo font size : 25px;
+logo font weight : 800;
+logo letter spacing : -1px;
+logo accent color : #5546f7;
+
+navigation links : Home, Browse, About, How It Works, Contact;
+navigation active page : About;
+navigation link padding : 10px 15px;
+navigation link border radius : 12px;
+navigation link font size : 14px;
+navigation link font weight : 600;
+navigation link text color : #20263a;
+navigation link hover color : #5546f7;
+navigation link hover background : #f3f1ff;
+navigation active color : #5546f7;
+navigation active background : #eeecff;
+navigation link text decoration : none;
+
+right navigation actions gap : 14px;
+search button size : 42px;
+search button background : transparent;
+search button color : #101828;
+search button border radius : 50%;
+search button hover background : #f1efff;
+search button hover color : #5546f7;
+login button background : #ffffff;
+login button border : 1px solid #e6e9f2;
+login button border radius : 13px;
+login button text color : #151a2e;
+login button hover border color : #5546f7;
+login button hover text color : #5546f7;
+get started button background : linear-gradient(135deg, #6845ff, #5141ed);
+get started button text color : #ffffff;
+get started button border radius : 13px;
+get started button shadow : 0 8px 20px rgba(91, 70, 246, 0.22);
+get started button hover transform : translateY(-2px);
+get started button hover shadow : 0 12px 26px rgba(91, 70, 246, 0.3);
+
+/*{ABOUT HERO AND STATISTICS}*/
+about hero min-height : 445px;
+about hero background : radial gradient at 72% with a pale blue glow over linear gradient #ffffff to #f7f9ff to #eef3ff;
+about hero overflow : hidden;
+about hero content width : min(1230px, 92%);
+about hero layout : 53% text column, 47% image column;
+about badge text : About Us;
+about badge background : #eeebff;
+about badge text color : #5b45ef;
+about hero heading : Empowering Students Through Real Opportunities;
+about hero heading accent color : #5944ef;
+about hero heading font size : clamp(42px, 4.2vw, 59px);
+about hero description : Every student deserves meaningful internships, real-world experience, and career guidance;
+about hero description max width : 650px;
+about hero illustration : ../assets/About page.png;
+about hero illustration alt text : Student learning and building career;
+about hero illustration width : 570px;
+about hero illustration fit : contain;
+about hero illustration shadow : 0 18px 22px rgba(74, 63, 170, 0.12);
+
+about statistics layout : four metrics displayed in a wrapping row;
+internships statistic : 1000+ Internships Listed;
+partner companies statistic : 500+ Partner Companies;
+students statistic : 50K+ Students Trusted;
+industries statistic : 10+ Industries Covered;
+statistics icon size : 45px;
+statistics icon border radius : 50%;
+purple statistic icon background : #eeebff;
+green statistic icon background : #e2f8f0;
+yellow statistic icon background : #fff3d6;
+blue statistic icon background : #e6f1ff;
+
+/*{MISSION, VISION, AND VALUES}*/
+purpose section background : #ffffff;
+purpose section content width : min(1230px, 92%);
+purpose cards layout : three-column grid for mission, vision, and values;
+purpose card minimum height : 185px;
+purpose card border radius : 17px;
+purpose card border : 1px solid rgba(220, 224, 235, 0.7);
+mission card title : Our Mission;
+mission card description : Bridge students and industry with verified internships, skill development resources, and career guidance in one place;
+mission card background : linear-gradient(135deg, #f8f7ff, #fdfdff);
+vision card title : Our Vision;
+vision card description : Become a trusted platform for students to discover opportunities, gain experience, and build brighter futures;
+vision card background : linear-gradient(135deg, #f4faff, #fbfdff);
+values card title : Our Values;
+values card background : linear-gradient(135deg, #fff7f8, #fffafb);
+values : Student-First Approach, Trust & Transparency, Real-World Learning, Equal Opportunities, Continuous Growth;
+
+/*{WHY CHOOSE INTERNBOARD}*/
+why section heading : Why Choose InternBoard?;
+why section description : Everything you need to take your first step toward a successful career;
+why cards layout : four-column grid;
+why card minimum height : 104px;
+why card border radius : 15px;
+why card border : 1px solid #e9edf3;
+benefit 1 title : Verified Internships;
+benefit 1 description : Only genuine opportunities from trusted companies;
+benefit 1 background : #f4f9ff;
+benefit 2 title : Diverse Categories;
+benefit 2 description : Explore internships across multiple domains;
+benefit 2 background : #fff5f6;
+benefit 3 title : Easy Application;
+benefit 3 description : Simple and student-friendly application process;
+benefit 3 background : #f2fbf7;
+benefit 4 title : Career Support;
+benefit 4 description : Resources, tips, and guidance to help you grow;
+benefit 4 background : #f7f4ff;
+
+/*{CALL TO ACTION}*/
+call to action heading : Start Your Internship Journey Today;
+call to action description : Join students who are building their careers with InternBoard;
+call to action width : min(1230px, 92%);
+call to action minimum height : 92px;
+call to action background : radial purple glow over linear gradient #5335ef to #6747ff;
+call to action text color : #ffffff;
+call to action button : Explore Internships;
+call to action button background : #ffffff;
+call to action button text color : #5944ed;
+call to action button border radius : 12px;
+call to action button hover transform : translateY(-2px);
+
+/*{SEARCH MODAL AND INTERACTIONS}*/
+search modal default display : none;
+search modal open display : flex;
+search modal position : fixed;
+search modal inset : 0;
+search modal z-index : 1000;
+search modal background : rgba(15, 19, 38, 0.55);
+search modal backdrop filter : blur(7px);
+search box width : min(620px, 92%);
+search box background : #ffffff;
+search box border radius : 22px;
+search modal heading : Find Your Next Opportunity;
+search input placeholder : Search internships, skills, companies...;
+popular search suggestions : React, Python, UI/UX, Java, Internships;
+search input focus border color : #6046f1;
+
+search button action : Open the search modal, prevent page scrolling, and focus the search input;
+close search action : Close the modal and restore page scrolling;
+modal background click : Close the modal;
+Escape key action : Close the modal;
+popular search action : Copy the selected suggestion into the input and focus it;
+explore internships button action : Navigate to Browse.html;
+get started button action : Navigate to register.html;
+login button action : Navigate to login.html;
+
+/*{RESPONSIVE LAYOUT}*/
+responsive breakpoint : 1050px;
+responsive at 1050px : Narrow navigation spacing, wrap hero statistics, use two purpose columns, and let values card span both columns;
+responsive breakpoint : 850px;
+responsive at 850px : Hide navigation links, stack hero content and image, center hero text, and use a two-column benefits grid;
+responsive breakpoint : 600px;
+responsive at 600px : Reduce navbar height, hide login button, use a two-column statistics grid, stack purpose and benefit cards, and stack call to action content;

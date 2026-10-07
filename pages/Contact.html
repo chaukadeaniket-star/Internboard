@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--{DOCUMENT METADATA}-->
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | InternBoard</title>
+
+    <link
+        rel="stylesheet"
+        href="../styles/Contact.css">
+</head>
+
+<body>
+
+
+    <!--{NAVBAR}-->
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <!--{LOGO}-->
+
+            <a
+                href="home.html"
+                class="logo">
+
+                <span class="logo-cap">🎓</span>
+
+                <span>
+                    Intern<span>Board</span>
+                </span>
+
+            </a>
+
+
+            <!--{NAVIGATION}-->
+            <nav class="nav-links">
+
+                <a href="home.html">
+                    Home
+                </a>
+
+                <a href="Browse.html">
+                    Browse
+                </a>
+
+                <a href="About.html">
+                    About
+                </a>
+
+                <a href="How_It_Works.html">
+                    How It Works
+                </a>
+
+                <a
+                    href="Contact.html"
+                    class="active">
+
+                    Contact
+
+                </a>
+
+            </nav>
+
+
+            <!--{RIGHT ACTIONS}-->
+
+            <div class="nav-actions">
+
+                <button
+                    class="search-btn"
+                    id="searchBtn"
+                    aria-label="Search">
+
+                    <svg
+                        width="21"
+                        height="21"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2">
+
+                        <circle
+                            cx="11"
+                            cy="11"
+                            r="7">
+                        </circle>
+
+                        <line
+                            x1="16.65"
+                            y1="16.65"
+                            x2="21"
+                            y2="21">
+                        </line>
+
+                    </svg>
+
+                </button>
+
+
+                <button
+                    class="login-btn"
+                    id="loginBtn">
+
+                    Login
+
+                </button>
+
+
+                <button
+                    class="started-btn"
+                    id="startedBtn">
+
+                    Get Started
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!--{CONTACT HERO}-->
+    <main>
+
+        <!--{CONTACT HERO}-->
+        <section class="contact-hero">
+
+            <div class="contact-container">
+
+
+                <!--{LEFT}-->
+
+                <div class="contact-intro">
+
+                    <div class="contact-badge">
+
+                        <span>⚡</span>
+
+                        Contact Us
+
+                    </div>
+
+
+                    <h1>
+
+                        Let's Build Your
+                        <br>
+
+                        <span>Career Together</span>
+
+                    </h1>
+
+
+                    <p>
+
+                        Have a question, need help finding
+                        an internship, or want to partner
+                        with InternBoard? We're here to help.
+
+                    </p>
+
+
+                    <!--{CONTACT INFORMATION}-->
+
+                    <div class="contact-info">
+
+
+                        <!--{EMAIL}-->
+
+                        <div class="info-item">
+
+                            <div class="info-icon email">
+                                ✉
+                            </div>
+
+                            <div>
+
+                                <h3>
+                                    Email Us
+                                </h3>
+
+                                <p>
+                                    support@internboard.com
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!--{PHONE}-->
+
+                        <div class="info-item">
+
+                            <div class="info-icon phone">
+                                ☎
+                            </div>
+
+                            <div>
+
+                                <h3>
+                                    Call Us
+                                </h3>
+
+                                <p>
+                                    +91 98765 43210
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!--{LOCATION}-->
+
+                        <div class="info-item">
+
+                            <div class="info-icon location">
+                                ●
+                            </div>
+
+                            <div>
+
+                                <h3>
+                                    Our Office
+                                </h3>
+
+                                <p>
+                                    Maharashtra, India
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!--{SOCIAL}-->
+
+                    <div class="social-section">
+
+                        <span>
+                            Follow us
+                        </span>
+
+                        <div class="social-links">
+
+                            <a href="#" aria-label="LinkedIn">
+                                in
+                            </a>
+
+                            <a href="#" aria-label="Instagram">
+                                ◎
+                            </a>
+
+                            <a href="#" aria-label="Twitter">
+                                𝕏
+                            </a>
+
+                            <a href="#" aria-label="GitHub">
+                                ◉
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!--{RIGHT CONTACT FORM}-->
+
+                <div class="contact-form-card">
+
+                    <div class="form-heading">
+
+                        <h2>
+                            Send Us a Message
+                        </h2>
+
+                        <p>
+                            Fill out the form and we'll
+                            get back to you soon.
+                        </p>
+
+                    </div>
+
+
+                    <!--{CONTACT FORM}-->
+                    <form id="contactForm">
+
+
+                        <!--{NAME}-->
+
+                        <div class="form-group">
+
+                            <label for="name">
+                                Full Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Enter your name"
+                                required>
+
+                        </div>
+
+
+                        <!--{EMAIL}-->
+
+                        <div class="form-group">
+
+                            <label for="email">
+                                Email Address
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Enter your email"
+                                required>
+
+                        </div>
+
+
+                        <!--{SUBJECT}-->
+
+                        <div class="form-group">
+
+                            <label for="subject">
+                                Subject
+                            </label>
+
+                            <select
+                                id="subject"
+                                name="subject"
+                                required>
+
+                                <option value="">
+                                    Select a subject
+                                </option>
+
+                                <option value="internship">
+                                    Internship Question
+                                </option>
+
+                                <option value="application">
+                                    Application Help
+                                </option>
+
+                                <option value="company">
+                                    Company Partnership
+                                </option>
+
+                                <option value="technical">
+                                    Technical Support
+                                </option>
+
+                                <option value="other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!--{MESSAGE}-->
+
+                        <div class="form-group">
+
+                            <label for="message">
+                                Message
+                            </label>
+
+                            <textarea
+                                id="message"
+                                name="message"
+                                rows="5"
+                                placeholder="Tell us how we can help..."
+                                required></textarea>
+
+                        </div>
+
+
+                        <!--{SUBMIT}-->
+
+                        <button
+                            type="submit"
+                            class="send-btn">
+
+                            Send Message
+
+                            <span>
+                                →
+                            </span>
+
+                        </button>
+
+
+                        <p
+                            class="form-status"
+                            id="formStatus">
+                        </p>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!--{FAQ AND HELP SECTION}-->
+
+        <!--{HELP SECTION}-->
+        <section class="help-section">
+
+            <div class="help-heading">
+
+                <div class="help-badge">
+                    💡 Quick Help
+                </div>
+
+                <h2>
+                    How Can We Help?
+                </h2>
+
+                <p>
+                    Find answers to some common questions.
+                </p>
+
+            </div>
+
+
+            <div class="help-grid">
+
+
+                <div class="help-card">
+
+                    <div class="help-icon">
+                        🔎
+                    </div>
+
+                    <h3>
+                        Looking for Internships?
+                    </h3>
+
+                    <p>
+                        Browse verified internship
+                        opportunities from companies
+                        across different industries.
+                    </p>
+
+                    <a href="Browse.html">
+                        Browse Internships →
+                    </a>
+
+                </div>
+
+
+
+                <div class="help-card">
+
+                    <div class="help-icon">
+                        📋
+                    </div>
+
+                    <h3>
+                        Need Application Help?
+                    </h3>
+
+                    <p>
+                        Learn how InternBoard works and
+                        understand the simple application
+                        process.
+                    </p>
+
+                    <a href="How_It_Works.html">
+                        Learn How It Works →
+                    </a>
+
+                </div>
+
+
+
+                <div class="help-card">
+
+                    <div class="help-icon">
+                        🤝
+                    </div>
+
+                    <h3>
+                        Want to Partner With Us?
+                    </h3>
+
+                    <p>
+                        Companies can connect with talented
+                        students and publish opportunities.
+                    </p>
+
+                    <a href="#contactForm">
+                        Become a Partner →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!--{CTA}-->
+        <section class="cta-section">
+
+            <div class="cta-left">
+
+                <div class="rocket">
+                    🚀
+                </div>
+
+                <div>
+
+                    <h2>
+                        Ready to Start Your Journey?
+                    </h2>
+
+                    <p>
+                        Discover internships and take
+                        the next step toward your career.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="cta-btn"
+                id="exploreBtn">
+
+                Explore Internships →
+
+            </button>
+
+        </section>
+
+    </main>
+
+
+
+    <!--{SEARCH MODAL}-->
+
+    <div
+        class="search-overlay"
+        id="searchOverlay">
+
+        <div class="search-panel">
+
+            <button
+                class="close-search"
+                id="closeSearch">
+
+                ×
+
+            </button>
+
+
+            <span class="search-label">
+                INTERNBOARD SEARCH
+            </span>
+
+
+            <h2>
+                Find Your Next Opportunity
+            </h2>
+
+
+            <div class="search-input">
+
+                <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2">
+
+                    <circle
+                        cx="11"
+                        cy="11"
+                        r="7">
+                    </circle>
+
+                    <line
+                        x1="16.65"
+                        y1="16.65"
+                        x2="21"
+                        y2="21">
+                    </line>
+
+                </svg>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search internships, skills, companies...">
+
+            </div>
+
+
+            <div class="popular-searches">
+
+                <span>
+                    Popular:
+                </span>
+
+                <button>React</button>
+
+                <button>Python</button>
+
+                <button>UI/UX</button>
+
+                <button>Java</button>
+
+                <button>Internships</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!--{JAVASCRIPT}-->
+    <script>
+
+        /* ==========================================
+           CONTACT FORM
+        =========================================== */
+
+        const contactForm =
+            document.getElementById("contactForm");
+
+        const formStatus =
+            document.getElementById("formStatus");
+
+
+        contactForm.addEventListener(
+            "submit",
+            function (event) {
+
+                event.preventDefault();
+
+                const name =
+                    document
+                        .getElementById("name")
+                        .value
+                        .trim();
+
+                formStatus.textContent =
+                    `Thank you, ${name}! Your message has been received.`;
+
+                formStatus.classList.add("success");
+
+                contactForm.reset();
+
+            }
+        );
+
+
+
+        /* ==========================================
+           SEARCH
+        =========================================== */
+
+        const searchBtn =
+            document.getElementById("searchBtn");
+
+        const searchOverlay =
+            document.getElementById("searchOverlay");
+
+        const closeSearch =
+            document.getElementById("closeSearch");
+
+        const searchInput =
+            document.getElementById("searchInput");
+
+
+        searchBtn.addEventListener(
+            "click",
+            function () {
+
+                searchOverlay.classList.add("show");
+
+                document.body.style.overflow =
+                    "hidden";
+
+                setTimeout(
+                    function () {
+                        searchInput.focus();
+                    },
+                    100
+                );
+
+            }
+        );
+
+
+        closeSearch.addEventListener(
+            "click",
+            function () {
+
+                searchOverlay.classList.remove("show");
+
+                document.body.style.overflow = "";
+
+            }
+        );
+
+
+        searchOverlay.addEventListener(
+            "click",
+            function (event) {
+
+                if (
+                    event.target === searchOverlay
+                ) {
+
+                    searchOverlay.classList.remove(
+                        "show"
+                    );
+
+                    document.body.style.overflow =
+                        "";
+
+                }
+
+            }
+        );
+
+
+        document.addEventListener(
+            "keydown",
+            function (event) {
+
+                if (event.key === "Escape") {
+
+                    searchOverlay.classList.remove(
+                        "show"
+                    );
+
+                    document.body.style.overflow =
+                        "";
+
+                }
+
+            }
+        );
+
+
+
+        /* ==========================================
+           POPULAR SEARCHES
+        =========================================== */
+
+        document
+            .querySelectorAll(
+                ".popular-searches button"
+            )
+            .forEach(
+                function (button) {
+
+                    button.addEventListener(
+                        "click",
+                        function () {
+
+                            searchInput.value =
+                                button.textContent.trim();
+
+                            searchInput.focus();
+
+                        }
+                    );
+
+                }
+            );
+
+
+
+        /* ==========================================
+           NAV BUTTONS
+        =========================================== */
+
+        document
+            .getElementById("startedBtn")
+            .addEventListener(
+                "click",
+                function () {
+
+                    window.location.href =
+                        "register.html";
+
+                }
+            );
+
+
+        document
+            .getElementById("exploreBtn")
+            .addEventListener(
+                "click",
+                function () {
+
+                    window.location.href =
+                        "Browse.html";
+
+                }
+            );
+
+
+        document
+            .getElementById("loginBtn")
+            .addEventListener(
+                "click",
+                function () {
+
+                    window.location.href = "login.html";
+
+                }
+            );
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+/*{PAGE OVERVIEW}*/
+Page: Student Dashboard
+HTML: pages/student-dashboard.html
+Stylesheet: styles/student-dashboard.css
+Purpose: Show the student profile, application totals, submitted positions, and document actions.
+
+/*{PROFILE OVERVIEW}*/
+Profile fields: Name, email, Intern ID, initials, and preferred field.
+Registration profile is read from sessionStorage under internboard.studentProfile.
+If a profile is not available, the page can use a submitted application to display the applicant's name and email.
+Some profile details and profile completeness are sample display values.
+
+/*{APPLICATIONS}*/
+Application records are read from localStorage under internboard.applications.
+The applications count is calculated from saved records.
+Each position shows role, company, location, duration, status, and date applied.
+An empty-state message appears when no applications have been saved.
+Successful application redirects display a confirmation message.
+
+/*{DOCUMENTS AND DOWNLOADS}*/
+Job specifications can be downloaded as a generated text document.
+Offer letter remains unavailable until a real offer document exists.
+Resume picker accepts PDF and Word documents up to 10 MB.
+The dashboard displays the selected resume filename; the file itself is not uploaded or stored.
+
+/*{DEMO LIMITATIONS}*/
+Profile and application data stay in this browser; no server or employer integration is connected.
+Applications saved in one browser are not available on another browser or device.

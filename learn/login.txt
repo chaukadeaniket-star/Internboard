@@ -1,0 +1,25 @@
+/*{PAGE OVERVIEW}*/
+Page: Login
+HTML: pages/login.html
+Stylesheet: styles/login.css
+Purpose: Present a lamp-reveal login form for returning InternBoard students.
+
+/*{LAMP INTERACTION}*/
+The login form starts hidden.
+Clicking the lamp turns on the light, reveals the form, updates the hint, and focuses the email field.
+Accessible pressed state and labels are updated when the lamp is activated.
+
+/*{LOGIN FORM}*/
+Fields: Email address and password.
+Browser-required validation checks that both fields are entered.
+The Show/Hide control toggles password visibility.
+Submitting displays a message that login is not connected yet.
+
+/*{NAVIGATION}*/
+The brand link returns to pages/home.html.
+Create an account opens pages/register.html.
+Browse internships opens pages/Browse.html.
+
+/*{DEMO LIMITATIONS}*/
+There is no authentication server or password verification.
+Login does not create or persist a session.

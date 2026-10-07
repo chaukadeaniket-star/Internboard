@@ -1,0 +1,1511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--{DOCUMENT METADATA}-->
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Browse Internships | InternBoard</title>
+
+    <link
+        rel="stylesheet"
+        href="../styles/Browse.css">
+</head>
+
+<body>
+
+    <!--{NAVBAR}-->
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <a href="home.html" class="logo">
+
+                <span class="logo-cap">🎓</span>
+
+                <span>
+                    Intern<span>Board</span>
+                </span>
+
+            </a>
+
+
+            <!--{NAV LINKS}-->
+            <nav class="nav-links">
+
+                <a href="home.html">
+                    Home
+                </a>
+
+                <a
+                    href="Browse.html"
+                    class="active">
+                    Browse
+                </a>
+
+                <a href="About.html">
+                    About
+                </a>
+
+                <a href="How_It_Works.html">
+                    How It Works
+                </a>
+
+                <a href="Contact.html">
+                    Contact
+                </a>
+
+            </nav>
+
+
+            <div class="nav-actions">
+
+                <!--{SEARCH}-->
+
+                <button
+                    class="search-btn"
+                    id="searchBtn"
+                    aria-label="Search">
+
+                    <svg
+                        width="21"
+                        height="21"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2">
+
+                        <circle
+                            cx="11"
+                            cy="11"
+                            r="7">
+                        </circle>
+
+                        <line
+                            x1="16.65"
+                            y1="16.65"
+                            x2="21"
+                            y2="21">
+                        </line>
+
+                    </svg>
+
+                </button>
+
+
+                <button
+                    class="login-btn"
+                    id="loginBtn">
+                    Login
+                </button>
+
+
+                <button
+                    class="started-btn"
+                    id="startedBtn">
+                    Get Started
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!--{BROWSE HERO}-->
+    <main>
+
+        <!--{BROWSE HERO}-->
+        <section class="browse-hero">
+
+            <div class="browse-hero-container">
+
+                <div class="browse-hero-content">
+
+                    <div class="hero-badge">
+
+                        <span>⚡</span>
+
+                        Explore Opportunities
+
+                    </div>
+
+
+                    <h1>
+
+                        Find Your
+                        <br>
+
+                        <span>Dream Internship</span>
+
+                    </h1>
+
+
+                    <p>
+
+                        Discover verified internships from
+                        leading companies and take the next
+                        step toward your career.
+
+                    </p>
+
+
+                    <div class="hero-stats">
+
+                        <div>
+
+                            <strong>1000+</strong>
+
+                            <span>
+                                Internships
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <strong>500+</strong>
+
+                            <span>
+                                Companies
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <strong>50K+</strong>
+
+                            <span>
+                                Students
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!--{SEPARATE IMAGE}-->
+
+                <div class="browse-hero-image">
+
+                    <img
+                        src="../assets/how it works .hero.png"
+                        alt="Student browsing internship opportunities">
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!--{SEARCH AND FILTERS}-->
+
+        <!--{BROWSE SECTION}-->
+        <section class="browse-section">
+
+            <div class="browse-container">
+
+
+                <div class="browse-title">
+
+                    <div>
+
+                        <h2>
+                            Browse Internships
+                        </h2>
+
+                        <p>
+                            Find opportunities that match
+                            your skills and career goals.
+                        </p>
+
+                    </div>
+
+                    <span class="result-count" id="resultCount" role="status" aria-live="polite">
+                        1000+ opportunities
+                    </span>
+
+                </div>
+
+
+                <!--{SEARCH}-->
+
+                <div class="main-search">
+
+                    <div class="search-input-wrapper">
+
+                        <svg
+                            width="21"
+                            height="21"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2">
+
+                            <circle
+                                cx="11"
+                                cy="11"
+                                r="7">
+                            </circle>
+
+                            <line
+                                x1="16.65"
+                                y1="16.65"
+                                x2="21"
+                                y2="21">
+                            </line>
+
+                        </svg>
+
+                        <input
+                            type="text"
+                            id="internshipSearch"
+                            aria-label="Search internships"
+                            placeholder="Search internships, companies, skills...">
+
+                    </div>
+
+
+                    <button
+                        class="search-main-btn"
+                        id="mainSearchBtn">
+
+                        Search
+
+                    </button>
+
+                </div>
+
+
+                <!--{FILTERS}-->
+
+                <div class="filters">
+
+                    <select id="domainFilter">
+
+                        <option value="all">
+                            All Domains
+                        </option>
+
+                        <option value="web">
+                            Web Development
+                        </option>
+
+                        <option value="frontend">
+                            Frontend
+                        </option>
+
+                        <option value="backend">
+                            Backend
+                        </option>
+
+                        <option value="mobile">
+                            Mobile Development
+                        </option>
+
+                        <option value="design">
+                            UI/UX Design
+                        </option>
+
+                        <option value="data">
+                            Data Science
+                        </option>
+
+                    </select>
+
+
+                    <select id="locationFilter">
+
+                        <option value="all">
+                            All Locations
+                        </option>
+
+                        <option value="remote">
+                            Remote
+                        </option>
+
+                        <option value="bangalore">
+                            Bengaluru
+                        </option>
+
+                        <option value="hyderabad">
+                            Hyderabad
+                        </option>
+
+                        <option value="mumbai">
+                            Mumbai
+                        </option>
+
+                        <option value="pune">
+                            Pune
+                        </option>
+
+                        <option value="cupertino">
+                            Cupertino
+                        </option>
+
+                    </select>
+
+
+                    <select id="durationFilter">
+
+                        <option value="all">
+                            Any Duration
+                        </option>
+
+                        <option value="3">
+                            3 Months
+                        </option>
+
+                        <option value="6">
+                            6 Months
+                        </option>
+
+                    </select>
+
+
+                    <select id="typeFilter">
+
+                        <option value="all">
+                            Internship Type
+                        </option>
+
+                        <option value="remote">
+                            Remote
+                        </option>
+
+                        <option value="hybrid">
+                            Hybrid
+                        </option>
+
+                        <option value="onsite">
+                            Onsite
+                        </option>
+
+                    </select>
+
+
+                    <button
+                        class="clear-filter"
+                        id="clearFilters">
+
+                        Clear Filters
+
+                    </button>
+
+                </div>
+
+
+
+                <!--{INTERNSHIP GRID}-->
+
+                <div
+                    class="internship-grid"
+                    id="internshipGrid">
+
+
+                    <!--{GOOGLE}-->
+
+                    <article
+                        class="internship-card"
+                        data-domain="web"
+                        data-location="remote"
+                        data-duration="3"
+                        data-type="remote"
+                        data-search="web development intern google react javascript">
+
+                        <div class="company-row">
+
+                            <button class="bookmark">
+                                ♡
+                            </button>
+
+                        </div>
+
+
+                        <h3>
+                            Web Development Intern
+                        </h3>
+
+                        <p class="company">
+                            Google
+                        </p>
+
+
+                        <div class="job-meta">
+
+                            <span>
+                                ◉ Remote
+                            </span>
+
+                            <span>
+                                ◷ 3 Months
+                            </span>
+
+                        </div>
+
+
+                        <div class="tags">
+
+                            <span>
+                                Web Development
+                            </span>
+
+                            <span>
+                                React
+                            </span>
+
+                            <span>
+                                JavaScript
+                            </span>
+
+                        </div>
+
+
+                        <div class="card-bottom">
+
+                            <span class="stipend">
+                                ₹25K/month
+                            </span>
+
+                            <button class="apply-btn">
+                                Apply Now →
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!--{MICROSOFT}-->
+
+                    <article
+                        class="internship-card"
+                        data-domain="frontend"
+                        data-location="bangalore"
+                        data-duration="6"
+                        data-type="hybrid"
+                        data-search="frontend intern microsoft react typescript">
+
+                        <div class="company-row">
+
+                            <button class="bookmark">
+                                ♡
+                            </button>
+
+                        </div>
+
+
+                        <h3>
+                            Frontend Intern
+                        </h3>
+
+                        <p class="company">
+                            Microsoft
+                        </p>
+
+
+                        <div class="job-meta">
+
+                            <span>
+                                ◉ Bengaluru
+                            </span>
+
+                            <span>
+                                ◷ 6 Months
+                            </span>
+
+                        </div>
+
+
+                        <div class="tags">
+
+                            <span>
+                                Frontend
+                            </span>
+
+                            <span>
+                                React
+                            </span>
+
+                            <span>
+                                TypeScript
+                            </span>
+
+                        </div>
+
+
+                        <div class="card-bottom">
+
+                            <span class="stipend">
+                                ₹30K/month
+                            </span>
+
+                            <button class="apply-btn">
+                                Apply Now →
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!--{APPLE}-->
+
+                    <article
+                        class="internship-card"
+                        data-domain="mobile"
+                        data-location="cupertino"
+                        data-duration="3"
+                        data-type="onsite"
+                        data-search="ios development intern apple swift mobile">
+
+                        <div class="company-row">
+
+                            <button class="bookmark">
+                                ♡
+                            </button>
+
+                        </div>
+
+
+                        <h3>
+                            iOS Development Intern
+                        </h3>
+
+                        <p class="company">
+                            Apple
+                        </p>
+
+
+                        <div class="job-meta">
+
+                            <span>
+                                ◉ Cupertino
+                            </span>
+
+                            <span>
+                                ◷ 3 Months
+                            </span>
+
+                        </div>
+
+
+                        <div class="tags">
+
+                            <span>
+                                iOS
+                            </span>
+
+                            <span>
+                                Swift
+                            </span>
+
+                            <span>
+                                Mobile
+                            </span>
+
+                        </div>
+
+
+                        <div class="card-bottom">
+
+                            <span class="stipend">
+                                ₹35K/month
+                            </span>
+
+                            <button class="apply-btn">
+                                Apply Now →
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!--{AMAZON}-->
+
+                    <article
+                        class="internship-card"
+                        data-domain="backend"
+                        data-location="hyderabad"
+                        data-duration="6"
+                        data-type="hybrid"
+                        data-search="software engineering intern amazon backend python django">
+
+                        <div class="company-row">
+
+                            <button class="bookmark">
+                                ♡
+                            </button>
+
+                        </div>
+
+
+                        <h3>
+                            Software Engineering Intern
+                        </h3>
+
+                        <p class="company">
+                            Amazon
+                        </p>
+
+
+                        <div class="job-meta">
+
+                            <span>
+                                ◉ Hyderabad
+                            </span>
+
+                            <span>
+                                ◷ 6 Months
+                            </span>
+
+                        </div>
+
+
+                        <div class="tags">
+
+                            <span>
+                                Backend
+                            </span>
+
+                            <span>
+                                Python
+                            </span>
+
+                            <span>
+                                Django
+                            </span>
+
+                        </div>
+
+
+                        <div class="card-bottom">
+
+                            <span class="stipend">
+                                ₹28K/month
+                            </span>
+
+                            <button class="apply-btn">
+                                Apply Now →
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!--{UI UX}-->
+
+                    <article
+                        class="internship-card"
+                        data-domain="design"
+                        data-location="mumbai"
+                        data-duration="3"
+                        data-type="hybrid"
+                        data-search="ui ux design intern figma">
+
+                        <div class="company-row">
+
+                            <button class="bookmark">
+                                ♡
+                            </button>
+
+                        </div>
+
+
+                        <h3>
+                            UI/UX Design Intern
+                        </h3>
+
+                        <p class="company">
+                            Adobe
+                        </p>
+
+
+                        <div class="job-meta">
+
+                            <span>
+                                ◉ Mumbai
+                            </span>
+
+                            <span>
+                                ◷ 3 Months
+                            </span>
+
+                        </div>
+
+
+                        <div class="tags">
+
+                            <span>
+                                UI/UX
+                            </span>
+
+                            <span>
+                                Figma
+                            </span>
+
+                            <span>
+                                Design
+                            </span>
+
+                        </div>
+
+
+                        <div class="card-bottom">
+
+                            <span class="stipend">
+                                ₹20K/month
+                            </span>
+
+                            <button class="apply-btn">
+                                Apply Now →
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!--{DATA}-->
+
+                    <article
+                        class="internship-card"
+                        data-domain="data"
+                        data-location="pune"
+                        data-duration="6"
+                        data-type="onsite"
+                        data-search="data science intern python machine learning">
+
+                        <div class="company-row">
+
+                            <button class="bookmark">
+                                ♡
+                            </button>
+
+                        </div>
+
+
+                        <h3>
+                            Data Science Intern
+                        </h3>
+
+                        <p class="company">
+                            IBM
+                        </p>
+
+
+                        <div class="job-meta">
+
+                            <span>
+                                ◉ Pune
+                            </span>
+
+                            <span>
+                                ◷ 6 Months
+                            </span>
+
+                        </div>
+
+
+                        <div class="tags">
+
+                            <span>
+                                Python
+                            </span>
+
+                            <span>
+                                ML
+                            </span>
+
+                            <span>
+                                Data
+                            </span>
+
+                        </div>
+
+
+                        <div class="card-bottom">
+
+                            <span class="stipend">
+                                ₹26K/month
+                            </span>
+
+                            <button class="apply-btn">
+                                Apply Now →
+                            </button>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <!--{NO RESULT}-->
+
+                <div
+                    class="no-results"
+                    id="noResults">
+
+                    <div>
+                        🔎
+                    </div>
+
+                    <h3>
+                        No internships found
+                    </h3>
+
+                    <p>
+                        Try changing your search or filters.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!--{CTA}-->
+        <section class="browse-cta">
+
+            <div>
+
+                <span class="cta-icon">
+                    🚀
+                </span>
+
+                <div>
+
+                    <h2>
+                        Your Next Opportunity Is Waiting
+                    </h2>
+
+                    <p>
+                        Start exploring internships and
+                        build your future today.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <button
+                onclick="window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                })">
+
+                Explore More →
+
+            </button>
+
+        </section>
+
+    </main>
+
+
+
+    <!--{SEARCH MODAL}-->
+
+    <div
+        class="search-overlay"
+        id="searchOverlay"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="searchModalHeading">
+
+        <div class="search-panel">
+
+            <button
+                class="close-search"
+                id="closeSearch"
+                type="button"
+                aria-label="Close search">
+
+                ×
+
+            </button>
+
+
+            <span class="search-label">
+                INTERNBOARD SEARCH
+            </span>
+
+
+            <h2 id="searchModalHeading">
+                Find Your Next Opportunity
+            </h2>
+
+
+            <!--{MODAL SEARCH}-->
+            <form class="modal-search" id="modalSearchForm">
+
+                <span>
+                    ⌕
+                </span>
+
+                <input
+                    id="modalSearchInput"
+                    type="text"
+                    aria-label="Search internships, skills, and companies"
+                    placeholder="Search internships, skills, companies...">
+
+                <button class="modal-search-submit" type="submit">
+                    Search
+                </button>
+
+            </form>
+
+
+            <div class="popular-searches">
+
+                <span>
+                    Popular:
+                </span>
+
+                <button>React</button>
+
+                <button>Python</button>
+
+                <button>UI/UX</button>
+
+                <button>Java</button>
+
+                <button>Internships</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!--{JAVASCRIPT}-->
+    <script>
+
+        const cards =
+            document.querySelectorAll(
+                ".internship-card"
+            );
+
+        const searchInput =
+            document.getElementById(
+                "internshipSearch"
+            );
+
+        const domainFilter =
+            document.getElementById(
+                "domainFilter"
+            );
+
+        const locationFilter =
+            document.getElementById(
+                "locationFilter"
+            );
+
+        const durationFilter =
+            document.getElementById(
+                "durationFilter"
+            );
+
+        const typeFilter =
+            document.getElementById(
+                "typeFilter"
+            );
+
+        const noResults =
+            document.getElementById(
+                "noResults"
+            );
+
+        const resultCount =
+            document.getElementById(
+                "resultCount"
+            );
+
+
+        /* ==========================================
+           FILTER FUNCTION
+        =========================================== */
+
+        function filterInternships() {
+
+            const search =
+                searchInput.value
+                    .toLowerCase()
+                    .trim();
+
+            const domain =
+                domainFilter.value;
+
+            const location =
+                locationFilter.value;
+
+            const duration =
+                durationFilter.value;
+
+            const type =
+                typeFilter.value;
+
+
+            let visibleCount = 0;
+
+
+            cards.forEach(
+                function (card) {
+
+                    const cardSearch =
+                        card.dataset.search
+                            .toLowerCase();
+
+                    const cardDomain =
+                        card.dataset.domain;
+
+                    const cardLocation =
+                        card.dataset.location;
+
+                    const cardDuration =
+                        card.dataset.duration;
+
+                    const cardType =
+                        card.dataset.type;
+
+
+                    const matchesSearch =
+                        search === "" ||
+                        cardSearch.includes(search) ||
+                        search === "internship" ||
+                        search === "internships" ||
+                        search === "internship opportunities";
+
+                    const matchesDomain =
+                        domain === "all" ||
+                        cardDomain === domain;
+
+                    const matchesLocation =
+                        location === "all" ||
+                        cardLocation === location;
+
+                    const matchesDuration =
+                        duration === "all" ||
+                        cardDuration === duration;
+
+                    const matchesType =
+                        type === "all" ||
+                        cardType === type;
+
+
+                    if (
+                        matchesSearch &&
+                        matchesDomain &&
+                        matchesLocation &&
+                        matchesDuration &&
+                        matchesType
+                    ) {
+
+                        card.style.display =
+                            "block";
+
+                        visibleCount++;
+
+                    } else {
+
+                        card.style.display =
+                            "none";
+
+                    }
+
+                }
+            );
+
+
+            noResults.style.display =
+                visibleCount === 0
+                    ? "block"
+                    : "none";
+
+            const hasActiveFilters =
+                search !== "" ||
+                domain !== "all" ||
+                location !== "all" ||
+                duration !== "all" ||
+                type !== "all";
+
+            resultCount.textContent =
+                hasActiveFilters
+                    ? `${visibleCount} matching internship${visibleCount === 1 ? "" : "s"}`
+                    : "1000+ opportunities";
+
+        }
+
+
+        searchInput.addEventListener(
+            "input",
+            function () {
+                modalSearchInput.value = searchInput.value;
+                filterInternships();
+            }
+        );
+
+        domainFilter.addEventListener(
+            "change",
+            filterInternships
+        );
+
+        locationFilter.addEventListener(
+            "change",
+            filterInternships
+        );
+
+        durationFilter.addEventListener(
+            "change",
+            filterInternships
+        );
+
+        typeFilter.addEventListener(
+            "change",
+            filterInternships
+        );
+
+
+        /*{SEARCH BUTTON}*/
+
+        document
+            .getElementById("mainSearchBtn")
+            .addEventListener(
+                "click",
+                filterInternships
+            );
+
+
+        /*{CLEAR FILTERS}*/
+
+        document
+            .getElementById("clearFilters")
+            .addEventListener(
+                "click",
+                function () {
+
+                    searchInput.value = "";
+
+                    domainFilter.value = "all";
+
+                    locationFilter.value = "all";
+
+                    durationFilter.value = "all";
+
+                    typeFilter.value = "all";
+
+                    filterInternships();
+
+                }
+            );
+
+
+        /* ==========================================
+           BOOKMARK
+        =========================================== */
+
+        document
+            .querySelectorAll(".bookmark")
+            .forEach(
+                function (button) {
+
+                    button.addEventListener(
+                        "click",
+                        function () {
+
+                            button.classList.toggle(
+                                "saved"
+                            );
+
+                            button.textContent =
+                                button.classList.contains(
+                                    "saved"
+                                )
+                                    ? "♥"
+                                    : "♡";
+
+                        }
+                    );
+
+                }
+            );
+
+
+        /* ==========================================
+           APPLY BUTTON
+        =========================================== */
+
+        document
+            .querySelectorAll(".apply-btn")
+            .forEach(
+                function (button) {
+
+                    button.addEventListener(
+                        "click",
+                        function () {
+
+                            const card =
+                                button.closest(".internship-card");
+
+                            const applicationDetails =
+                                new URLSearchParams({
+                                    job: card.querySelector("h3").textContent.trim(),
+                                    company: card.querySelector(".company").textContent.trim(),
+                                    location: card.querySelector(".job-meta span:first-child").textContent.replace("◉", "").trim(),
+                                    duration: card.querySelector(".job-meta span:nth-child(2)").textContent.replace("◷", "").trim(),
+                                    stipend: card.querySelector(".stipend").textContent.trim(),
+                                    skills: Array.from(card.querySelectorAll(".tags span"))
+                                        .map(function (tag) {
+                                            return tag.textContent.trim();
+                                        })
+                                        .join(", ")
+                                });
+
+                            window.location.href =
+                                "apply.html?" + applicationDetails.toString();
+
+                        }
+                    );
+
+                }
+            );
+
+
+        /* ==========================================
+           SEARCH MODAL
+        =========================================== */
+
+        const searchBtn =
+            document.getElementById(
+                "searchBtn"
+            );
+
+        const searchOverlay =
+            document.getElementById(
+                "searchOverlay"
+            );
+
+        const closeSearch =
+            document.getElementById(
+                "closeSearch"
+            );
+
+        const modalSearchInput =
+            document.getElementById(
+                "modalSearchInput"
+            );
+
+        const modalSearchForm =
+            document.getElementById(
+                "modalSearchForm"
+            );
+
+
+        searchBtn.addEventListener(
+            "click",
+            function () {
+
+                modalSearchInput.value =
+                    searchInput.value;
+
+                searchOverlay.classList.add(
+                    "show"
+                );
+
+                document.body.style.overflow =
+                    "hidden";
+
+                setTimeout(
+                    function () {
+
+                        modalSearchInput.focus({
+                            preventScroll: true
+                        });
+
+                    },
+                    100
+                );
+
+            }
+        );
+
+
+        closeSearch.addEventListener(
+            "click",
+            closeSearchPanel
+        );
+
+        function closeSearchPanel() {
+
+            searchOverlay.classList.remove(
+                "show"
+            );
+
+            document.body.style.overflow =
+                "";
+
+            searchBtn.focus({
+                preventScroll: true
+            });
+
+        }
+
+
+        searchOverlay.addEventListener(
+            "click",
+            function (event) {
+
+                if (
+                    event.target === searchOverlay
+                ) {
+
+                    closeSearchPanel();
+
+                }
+
+            }
+        );
+
+
+        document.addEventListener(
+            "keydown",
+            function (event) {
+
+                if (
+                    event.key === "Escape" &&
+                    searchOverlay.classList.contains("show")
+                ) {
+
+                    closeSearchPanel();
+
+                }
+
+            }
+        );
+
+
+        /*{MODAL SEARCH}*/
+
+        modalSearchInput.addEventListener(
+            "input",
+            function () {
+
+                searchInput.value =
+                    modalSearchInput.value;
+
+                filterInternships();
+
+            }
+        );
+
+        modalSearchForm.addEventListener(
+            "submit",
+            function (event) {
+
+                event.preventDefault();
+                searchInput.value = modalSearchInput.value;
+                filterInternships();
+                closeSearchPanel();
+
+                document
+                    .getElementById("internshipGrid")
+                    .scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
+
+            }
+        );
+
+
+        /*{POPULAR SEARCH}*/
+
+        document
+            .querySelectorAll(
+                ".popular-searches button"
+            )
+            .forEach(
+                function (button) {
+
+                    button.addEventListener(
+                        "click",
+                        function () {
+
+                            modalSearchInput.value =
+                                button.textContent.trim();
+
+                            searchInput.value =
+                                button.textContent.trim();
+
+                            filterInternships();
+                            modalSearchInput.focus({
+                                preventScroll: true
+                            });
+
+                        }
+                    );
+
+                }
+            );
+
+
+        /* ==========================================
+           NAVIGATION
+        =========================================== */
+
+        document
+            .getElementById("startedBtn")
+            .addEventListener(
+                "click",
+                function () {
+
+                    window.location.href =
+                        "register.html";
+
+                }
+            );
+
+
+        document
+            .getElementById("loginBtn")
+            .addEventListener(
+                "click",
+                function () {
+
+                    window.location.href = "login.html";
+
+                }
+            );
+
+    </script>
+
+</body>
+
+</html>

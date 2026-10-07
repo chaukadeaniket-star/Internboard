@@ -1,0 +1,24 @@
+/*{PAGE OVERVIEW}*/
+Page: Create Account
+HTML: pages/register.html
+Stylesheet: styles/login.css
+Purpose: Create a demo student profile and route the student to the dashboard.
+
+/*{LAMP INTERACTION}*/
+The registration form starts hidden.
+Clicking the lamp reveals the form, updates the hint, and focuses the full-name field.
+
+/*{REGISTRATION FORM}*/
+Fields: Full name, email address, password, and confirm password.
+Browser validation requires the name, a valid email, and passwords of at least 8 characters.
+Password and confirmation must match.
+The Show/Hide control toggles both password inputs.
+The password is not saved.
+
+/*{PROFILE AND NAVIGATION}*/
+Successful submission saves the student's name, email, and generated Intern ID to sessionStorage under internboard.studentProfile.
+The user is redirected to pages/student-dashboard.html.
+The Login link opens pages/login.html.
+
+/*{DEMO LIMITATIONS}*/
+This is not a server-backed account. Profile data is available only in this browser session.
