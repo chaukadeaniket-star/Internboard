@@ -136,14 +136,15 @@ button {
 .signed-in-badge {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    margin-left: 10px;
-    padding: 5px 9px;
-    border: 1px solid #ccebdc;
-    border-radius: 999px;
-    background: #f0fbf5;
-    color: #28734c;
+    gap: 7px;
+    margin-left: 12px;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    color: #1f2937;
     font-size: 10px;
+    font-weight: 600;
     letter-spacing: 0;
     vertical-align: middle;
 }
@@ -153,10 +154,13 @@ button {
 }
 
 .signed-in-dot {
-    width: 7px;
-    height: 7px;
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    flex: 0 0 9px;
     border-radius: 50%;
     background: #31a66a;
+    box-shadow: 0 0 0 2px rgba(49, 166, 106, 0.12);
 }
 
 .sign-out-button {
