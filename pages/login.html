@@ -37,7 +37,7 @@
             <div class="card-icon" aria-hidden="true">✨</div>
             <p class="eyebrow">WELCOME BACK</p>
             <h2 id="login-heading">Login to InternBoard</h2>
-            <p class="card-description">Pick up where your career journey left off.</p>
+            <p class="card-description">Pick up where your career journey left off. Demo sign-in opens the student dashboard; credentials are not verified by a server.</p>
 
             <!--{LOGIN FORM}-->
             <form id="loginForm">
@@ -92,8 +92,46 @@
 
         loginForm.addEventListener("submit", (event) => {
             event.preventDefault();
-            formMessage.textContent = "Login is not connected yet. Please check back soon.";
+            const email = emailInput.value.trim();
+            let studentProfile;
+
+            try {
+                const savedProfile = window.localStorage.getItem("internboard.studentProfile");
+                if (savedProfile) {
+                    const parsedProfile = JSON.parse(savedProfile);
+                    if (!parsedProfile || typeof parsedProfile.name !== "string" ||
+                        typeof parsedProfile.email !== "string") {
+                        throw new Error("The saved student profile is invalid.");
+                    }
+
+                    if (parsedProfile.email.toLowerCase() === email.toLowerCase()) {
+                        studentProfile = parsedProfile;
+                    }
+                }
+
+                if (!studentProfile) {
+                    const emailName = email.split("@")[0]
+                        .replace(/[._-]+/g, " ")
+                        .replace(/\b\w/g, (letter) => letter.toUpperCase());
+                    studentProfile = {
+                        name: emailName || "Student",
+                        email,
+                        internId: `IB-${new Date().getFullYear()}-${Math.floor(100000 + Math.random() * 900000)}`
+                    };
+                }
+
+                window.localStorage.setItem(
+                    "internboard.studentProfile",
+                    JSON.stringify(studentProfile)
+                );
+            } catch (error) {
+                formMessage.textContent = "Could not sign in because browser storage is unavailable or the saved student profile is invalid. Please check browser storage settings and try again.";
+                return;
+            }
+
+            window.location.href = window.InternBoardSession.getPostLoginDestination();
         });
     </script>
+    <script src="../functionality/Session.js"></script>
 </body>
 </html>

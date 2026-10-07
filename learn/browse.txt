@@ -25,7 +25,9 @@ Selecting a popular term copies it into the search input.
 
 /*{NAVIGATION}*/
 Get Started opens pages/register.html.
-The Browse page remains available through the main navigation and internship links.
+Visitors are redirected to login when they open this protected page.
+After signing in, students can browse and return to the requested destination.
+The shared functionality/Session.js script shows the signed-in student's name and logout control.
 
 /*{DEMO LIMITATIONS}*/
 The listed roles are sample opportunities; no live job service is connected.

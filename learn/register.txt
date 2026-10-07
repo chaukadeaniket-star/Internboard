@@ -2,7 +2,7 @@
 Page: Create Account
 HTML: pages/register.html
 Stylesheet: styles/login.css
-Purpose: Create a demo student profile and route the student to the dashboard.
+Purpose: Create a demo student profile and sign the student into InternBoard.
 
 /*{LAMP INTERACTION}*/
 The registration form starts hidden.
@@ -16,9 +16,9 @@ The Show/Hide control toggles both password inputs.
 The password is not saved.
 
 /*{PROFILE AND NAVIGATION}*/
-Successful submission saves the student's name, email, and generated Intern ID to sessionStorage under internboard.studentProfile.
-The user is redirected to pages/student-dashboard.html.
+Successful submission saves the student's name, email, and generated Intern ID to localStorage under internboard.studentProfile.
+The password is not saved. The student is returned to the protected page they originally requested, or to pages/student_profile.html by default.
 The Login link opens pages/login.html.
 
 /*{DEMO LIMITATIONS}*/
-This is not a server-backed account. Profile data is available only in this browser session.
+This is not a server-backed account. The profile remains in this browser until the student logs out or clears browser storage.

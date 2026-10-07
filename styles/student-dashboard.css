@@ -118,6 +118,12 @@ button {
     margin-bottom: 25px;
 }
 
+.welcome-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
 .eyebrow,
 .profile-tag {
     margin: 0;
@@ -125,6 +131,49 @@ button {
     font-size: 10px;
     font-weight: 800;
     letter-spacing: 1.2px;
+}
+
+.signed-in-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: 10px;
+    padding: 5px 9px;
+    border: 1px solid #ccebdc;
+    border-radius: 999px;
+    background: #f0fbf5;
+    color: #28734c;
+    font-size: 10px;
+    letter-spacing: 0;
+    vertical-align: middle;
+}
+
+.signed-in-badge[hidden] {
+    display: none;
+}
+
+.signed-in-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #31a66a;
+}
+
+.sign-out-button {
+    min-height: 43px;
+    padding: 0 14px;
+    border: 1px solid #e0e5ef;
+    border-radius: 11px;
+    background: #ffffff;
+    color: #58647b;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.sign-out-button:hover {
+    border-color: #c8c1ff;
+    color: #5546f7;
 }
 
 .welcome-row h1 {

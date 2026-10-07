@@ -22,10 +22,6 @@
                 <a href="Browse.html">Browse internships</a>
                 <a href="How_It_Works.html">How it works</a>
             </nav>
-            <a class="header-profile" href="#profile" aria-label="Student profile">
-                <span class="avatar-small" id="headerInitials" aria-hidden="true">AM</span>
-                <span>My profile</span>
-            </a>
         </div>
     </header>
 
@@ -34,11 +30,18 @@
         <!--{WELCOME ROW}-->
         <section class="welcome-row" aria-labelledby="welcomeHeading">
             <div>
-                <p class="eyebrow">STUDENT DASHBOARD</p>
+                <p class="eyebrow">STUDENT DASHBOARD
+                    <span class="signed-in-badge" id="signedInBadge" hidden>
+                        <span class="signed-in-dot" aria-hidden="true"></span>
+                        Signed in as <span id="signedInName">Student</span>
+                    </span>
+                </p>
                 <h1 id="welcomeHeading">Welcome back, Alex</h1>
                 <p class="welcome-copy">Keep track of your applications and career documents in one place.</p>
             </div>
-            <a class="primary-link" href="Browse.html">Explore internships <span aria-hidden="true">→</span></a>
+            <div class="welcome-actions">
+                <a class="primary-link" href="Browse.html">Explore internships <span aria-hidden="true">→</span></a>
+            </div>
         </section>
 
         <!--{OVERVIEW GRID}-->
@@ -241,10 +244,10 @@
 
         let savedProfile = null;
         try {
-            savedProfile = window.sessionStorage.getItem("internboard.studentProfile");
+            savedProfile = window.localStorage.getItem("internboard.studentProfile");
         } catch (error) {
             dashboardNote.textContent =
-                "Could not load the new student profile because this browser blocked session storage. The sample dashboard is shown instead.";
+                "Could not load the student profile because this browser blocked persistent storage. The sample dashboard is shown instead.";
         }
 
         if (savedProfile) {
@@ -260,10 +263,11 @@
                 document.getElementById("profileName").textContent = fullName;
                 document.getElementById("profileEmail").textContent = studentProfile.email || "";
                 document.getElementById("profileInternId").textContent = studentProfile.internId || "Pending";
-                document.getElementById("headerInitials").textContent = initials;
                 document.getElementById("profileInitials").textContent = initials;
+                document.getElementById("signedInName").textContent = nameParts[0];
+                document.getElementById("signedInBadge").hidden = false;
                 dashboardNote.textContent =
-                    "Your profile details are kept in this browser session only; no account server is connected.";
+                    "You stay signed in on this browser until you log out or clear browser storage. No account server is connected.";
             } catch (error) {
                 dashboardNote.textContent =
                     "The saved student profile could not be read. The sample dashboard is shown instead.";
@@ -342,5 +346,6 @@
             });
         });
     </script>
+    <script src="../functionality/Session.js"></script>
 </body>
 </html>

@@ -129,7 +129,7 @@
         const maxResumeSize = 10 * 1024 * 1024;
 
         try {
-            const savedProfile = window.sessionStorage.getItem("internboard.studentProfile");
+            const savedProfile = window.localStorage.getItem("internboard.studentProfile");
             if (savedProfile) {
                 const studentProfile = JSON.parse(savedProfile);
                 document.getElementById("applicantName").value = studentProfile.name || "";
@@ -188,5 +188,6 @@
             }
         });
     </script>
+    <script src="../functionality/Session.js"></script>
 </body>
 </html>

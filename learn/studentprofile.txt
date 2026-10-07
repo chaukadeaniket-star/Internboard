@@ -5,17 +5,24 @@ Registration creates a student profile object with:
 - internId: a generated InternBoard identifier
 
 /*{STORAGE}*/
-The profile is saved in sessionStorage under the key internboard.studentProfile.
+The profile is saved in localStorage under the key internboard.studentProfile.
 The password is never included in this profile object.
-Session storage is local to the current browser tab/session and is not an account database.
+The shared functionality/Session.js script reads this profile to keep the student signed in across site pages and reloads.
+Logging out removes the profile and returns the student to visitor access.
+
+/*{STUDENT PORTAL DISPLAY}*/
+pages/student_profile.html reads the saved profile to show the student's name, email, Intern ID, and initials.
+The portal links to Home, Browse Internships, About, How It Works, Contact, and the student dashboard.
+Visitors without a saved profile are redirected to login before opening protected pages.
 
 /*{DASHBOARD DISPLAY}*/
 pages/student-dashboard.html reads the saved profile to show the student's name, email, Intern ID, and initials.
 If browser storage is unavailable, the dashboard displays an explanatory message and falls back to sample profile details.
 
 /*{APPLICATION PROFILE PREFILL}*/
-pages/apply.html uses the saved name and email to prefill the application form when available.
+pages/Apply.html uses the saved name and email to prefill the application form when available.
 Application records themselves are saved separately in localStorage under internboard.applications.
 
 /*{DEMO LIMITATIONS}*/
 The profile is not sent to a server and is not shared across browsers or devices.
+Page access checks are client-side demonstration behavior, not secure server authorization.

@@ -6,9 +6,10 @@ Purpose: Show the student profile, application totals, submitted positions, and 
 
 /*{PROFILE OVERVIEW}*/
 Profile fields: Name, email, Intern ID, initials, and preferred field.
-Registration profile is read from sessionStorage under internboard.studentProfile.
+Registration profile is read from localStorage under internboard.studentProfile.
 If a profile is not available, the page can use a submitted application to display the applicant's name and email.
 Some profile details and profile completeness are sample display values.
+The shared functionality/Session.js script requires a saved student profile before allowing access.
 
 /*{APPLICATIONS}*/
 Application records are read from localStorage under internboard.applications.
@@ -24,5 +25,6 @@ Resume picker accepts PDF and Word documents up to 10 MB.
 The dashboard displays the selected resume filename; the file itself is not uploaded or stored.
 
 /*{DEMO LIMITATIONS}*/
-Profile and application data stay in this browser; no server or employer integration is connected.
+Profile and application data stay in this browser; no authentication server or employer integration is connected.
+The student stays signed in across pages until logout or browser storage is cleared.
 Applications saved in one browser are not available on another browser or device.

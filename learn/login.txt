@@ -13,13 +13,15 @@ Accessible pressed state and labels are updated when the lamp is activated.
 Fields: Email address and password.
 Browser-required validation checks that both fields are entered.
 The Show/Hide control toggles password visibility.
-Submitting displays a message that login is not connected yet.
+Submitting reuses a saved matching student profile or creates a demo profile from the entered email.
+The profile is saved in localStorage under internboard.studentProfile.
+After successful demo sign-in, the student returns to the protected page they originally requested, or opens pages/student_profile.html by default.
 
 /*{NAVIGATION}*/
 The brand link returns to pages/home.html.
-Create an account opens pages/register.html.
-Browse internships opens pages/Browse.html.
+Create an account opens pages/register.html and preserves the requested destination.
+Browse internships opens pages/Browse.html when the visitor is signed in; otherwise the shared page guard redirects to login.
 
 /*{DEMO LIMITATIONS}*/
-There is no authentication server or password verification.
-Login does not create or persist a session.
+This is not server-backed authentication and the password is not verified.
+The browser-stored profile keeps the student signed in across pages and reloads until logout or browser storage is cleared.

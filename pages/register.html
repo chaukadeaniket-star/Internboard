@@ -123,17 +123,18 @@
             };
 
             try {
-                window.sessionStorage.setItem(
+                window.localStorage.setItem(
                     "internboard.studentProfile",
                     JSON.stringify(studentProfile)
                 );
             } catch (error) {
-                formMessage.textContent = "Could not continue because this browser blocked session storage. Please enable site storage and try again.";
+                formMessage.textContent = "Could not continue because this browser blocked persistent storage. Please enable site storage and try again.";
                 return;
             }
 
-            window.location.href = "student-dashboard.html";
+            window.location.href = window.InternBoardSession.getPostLoginDestination();
         });
     </script>
+    <script src="../functionality/Session.js"></script>
 </body>
 </html>

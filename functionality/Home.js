@@ -335,6 +335,25 @@ document.addEventListener("DOMContentLoaded", function () {
             "click",
             function () {
 
+                try {
+                    const studentProfile = window.localStorage.getItem("internboard.studentProfile");
+                    if (!studentProfile) {
+                        window.location.href = "login.html";
+                        return;
+                    }
+
+                    const parsedProfile = JSON.parse(studentProfile);
+                    if (!parsedProfile || typeof parsedProfile.name !== "string" ||
+                        typeof parsedProfile.email !== "string") {
+                        throw new Error("The saved student profile is invalid.");
+                    }
+                } catch (error) {
+                    console.error("Could not verify the InternBoard student sign-in.", error);
+                    window.alert("Please sign in again to access this video.");
+                    window.location.href = "login.html";
+                    return;
+                }
+
                 videoModal.classList.add(
                     "show"
                 );

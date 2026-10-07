@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f8faff">
+    <title>Student Profile | InternBoard</title>
+    <link rel="stylesheet" href="../styles/student_profile.css">
+    <link rel="shortcut icon" href="../assets/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="home.html" aria-label="InternBoard home">
+                <span aria-hidden="true">🎓</span>
+                <span>Intern<span class="brand-accent">Board</span></span>
+            </a>
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="home.html">Home</a>
+                <a href="Browse.html">Browse internships</a>
+                <a href="About.html">About</a>
+                <a href="How_It_Works.html">How it works</a>
+                <a href="Contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="profile-page">
+        <section class="welcome-panel" aria-labelledby="welcomeHeading">
+            <div>
+                <p class="eyebrow">STUDENT PORTAL</p>
+                <h1 id="welcomeHeading">Welcome, Student</h1>
+                <p class="welcome-copy">Your InternBoard profile is ready. Use this page to explore opportunities and manage your internship journey.</p>
+            </div>
+            <a class="primary-link" href="Browse.html">Explore internships <span aria-hidden="true">→</span></a>
+        </section>
+
+        <p class="page-message" id="pageMessage" role="status" aria-live="polite" hidden></p>
+
+        <section class="content-grid" aria-label="Student profile and website links">
+            <article class="profile-card">
+                <div class="profile-heading">
+                    <div class="avatar" id="profileInitials" aria-hidden="true">ST</div>
+                    <div>
+                        <p class="eyebrow">YOUR ACCOUNT</p>
+                        <h2 id="profileName">Student</h2>
+                        <p class="account-type">Student account</p>
+                    </div>
+                </div>
+                <dl class="profile-details">
+                    <div>
+                        <dt>Email address</dt>
+                        <dd id="profileEmail"></dd>
+                    </div>
+                    <div>
+                        <dt>Intern ID</dt>
+                        <dd id="profileInternId">Not assigned</dd>
+                    </div>
+                    <div>
+                        <dt>Account status</dt>
+                        <dd><span class="active-status"><span class="status-dot" aria-hidden="true"></span>Signed in on this device</span></dd>
+                    </div>
+                </dl>
+                <p class="storage-note">You stay signed in on this browser until you log out or clear browser storage. This demo does not verify passwords with an account server.</p>
+            </article>
+
+            <section class="site-links" aria-labelledby="siteLinksHeading">
+                <div class="section-heading">
+                    <p class="eyebrow">YOUR INTERNBOARD</p>
+                    <h2 id="siteLinksHeading">Go to any part of the website</h2>
+                    <p>Use these shortcuts to move around InternBoard while keeping your student portal close by.</p>
+                </div>
+                <div class="link-grid">
+                    <a class="link-card featured-card" href="Browse.html">
+                        <span class="link-icon" aria-hidden="true">⌕</span>
+                        <span class="link-card-copy">
+                            <strong>Browse internships</strong>
+                            <span>Find roles and apply for opportunities.</span>
+                        </span>
+                        <span class="link-arrow" aria-hidden="true">→</span>
+                    </a>
+                    <a class="link-card" href="student-dashboard.html">
+                        <span class="link-icon" aria-hidden="true">▤</span>
+                        <span class="link-card-copy">
+                            <strong>Applications &amp; dashboard</strong>
+                            <span>Review applications, profile details, and documents.</span>
+                        </span>
+                        <span class="link-arrow" aria-hidden="true">→</span>
+                    </a>
+                    <a class="link-card" href="How_It_Works.html">
+                        <span class="link-icon" aria-hidden="true">◎</span>
+                        <span class="link-card-copy">
+                            <strong>How it works</strong>
+                            <span>Learn how to find and apply for internships.</span>
+                        </span>
+                        <span class="link-arrow" aria-hidden="true">→</span>
+                    </a>
+                    <a class="link-card" href="About.html">
+                        <span class="link-icon" aria-hidden="true">✦</span>
+                        <span class="link-card-copy">
+                            <strong>About InternBoard</strong>
+                            <span>Learn more about the platform.</span>
+                        </span>
+                        <span class="link-arrow" aria-hidden="true">→</span>
+                    </a>
+                    <a class="link-card" href="Contact.html">
+                        <span class="link-icon" aria-hidden="true">✉</span>
+                        <span class="link-card-copy">
+                            <strong>Contact</strong>
+                            <span>Get in touch with the InternBoard team.</span>
+                        </span>
+                        <span class="link-arrow" aria-hidden="true">→</span>
+                    </a>
+                    <a class="link-card" href="home.html">
+                        <span class="link-icon" aria-hidden="true">⌂</span>
+                        <span class="link-card-copy">
+                            <strong>Home</strong>
+                            <span>Return to the InternBoard landing page.</span>
+                        </span>
+                        <span class="link-arrow" aria-hidden="true">→</span>
+                    </a>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <script>
+        const pageMessage = document.getElementById("pageMessage");
+
+        try {
+            const savedProfile = window.localStorage.getItem("internboard.studentProfile");
+            if (!savedProfile) {
+                pageMessage.textContent = "Please sign in to view your student profile.";
+                pageMessage.hidden = false;
+            } else {
+                const studentProfile = JSON.parse(savedProfile);
+                if (!studentProfile || typeof studentProfile.name !== "string" ||
+                    typeof studentProfile.email !== "string") {
+                    throw new Error("The saved student profile is invalid.");
+                }
+
+                const fullName = studentProfile.name.trim() || "Student";
+                const nameParts = fullName.split(/\s+/);
+                const initials = nameParts.length > 1
+                    ? `${nameParts[0][0]}${nameParts[nameParts.length - 1][0]}`.toUpperCase()
+                    : fullName.slice(0, 2).toUpperCase();
+                document.getElementById("welcomeHeading").textContent = `Welcome, ${nameParts[0]}`;
+                document.getElementById("profileName").textContent = fullName;
+                document.getElementById("profileEmail").textContent = studentProfile.email;
+                document.getElementById("profileInternId").textContent = studentProfile.internId || "Not assigned";
+                document.getElementById("profileInitials").textContent = initials;
+            }
+        } catch (error) {
+            pageMessage.textContent = "Your student profile could not be loaded. Please check browser storage settings, then sign in again.";
+            pageMessage.hidden = false;
+        }
+
+    </script>
+    <script src="../functionality/Session.js"></script>
+</body>
+</html>

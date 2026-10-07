@@ -15,7 +15,8 @@ Optional field: Phone number.
 Cover letter minimum length: 20 characters.
 Resume formats: PDF and Word (.doc, .docx).
 Maximum resume size: 10 MB.
-Registration profile name and email are prefilled when available in this browser session.
+The signed-in profile name and email are prefilled when available in browser storage.
+Visitors are redirected to login before opening this protected page.
 
 /*{SUBMIT ACTION}*/
 Browser form validation runs before the application is saved.

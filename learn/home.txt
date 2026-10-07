@@ -20,6 +20,8 @@ Logo: 🎓 InternBoard
 Navigation links: Home, Browse, About, How It Works, Contact
 Search and Login buttons: Open their site actions
 Get Started action: Opens pages/register.html
+Visitors can access the home page without signing in; other site pages require a saved student profile.
+Signed-in students see their name, a portal link, and a logout control through functionality/Session.js.
 
 /*{HERO}*/
 Heading: Your Gateway to Amazing Internships
@@ -38,7 +40,7 @@ View All Internships action: Opens pages/Browse.html
 /*{FEATURES AND MODALS}*/
 Feature cards: Curated Opportunities, Build Real Skills, Track Your Progress, Career Growth
 Search overlay: Opens from the navbar search control and can be closed with its close control, backdrop, or Escape
-Video modal: Opens from Watch Video and closes from its close control or backdrop
+Video modal: Watch Video requires a signed-in student; visitors are redirected to login. The modal closes from its close control or backdrop.
 Keyboard behavior: Search and modal controls support keyboard interaction
 
 /*{RESPONSIVE LAYOUT}*/
@@ -47,3 +49,4 @@ Stylesheet breakpoints adjust navigation, hero content, cards, and modal layout 
 /*{DEMO LIMITATIONS}*/
 Internship counts and preview cards are static demonstration content.
 This frontend does not connect to a live jobs or account service.
+The shared page guard and video restriction are client-side demo behavior, not secure authorization.
